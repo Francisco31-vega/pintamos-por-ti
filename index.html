@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="imagenes/favicon.ico.ico" type="image/ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintamos por Ti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Pintamos por Ti</h1>
+        <p>Transformamos tus espacios con los mejores colores</p>
+    </header>
+
+    <!-- Carrusel de imágenes de trabajos -->
+    <section class="trabajos">
+        <h2></h2>
+        <div class="slideshow-container">
+            <!-- Imágenes del carrusel -->
+            <div class="mySlides fade">
+                <img src="imagenes/imagen1.jpg" style="width:100%" alt="Trabajo 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="imagenes/imagen2.jpg" style="width:100%" alt="Trabajo 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="imagenes/imagen3.jpg" style="width:100%" alt="Trabajo 3">
+            </div>
+            <!-- Botones de navegación -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- Puntos indicadores -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </section>
+
+    <!-- Calculadora de pintura -->
+    <section class="calculadora">
+        <h2>Calculadora de Pintura</h2>
+        <p>Introduce las dimensiones de la pared para calcular cuánta pintura necesitarás:</p>
+        <form id="paint-calculator">
+            <label for="alto">Altura de la pared (en metros):</label>
+            <input type="number" id="alto" step="0.1" required>
+            
+            <label for="ancho">Ancho de la pared (en metros):</label>
+            <input type="number" id="ancho" step="0.1" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="resultado"></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Pintamos por Ti - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
